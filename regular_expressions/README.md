@@ -1,1 +1,1 @@
-regular expressiosn(regexp)
+regular expression(regex)
