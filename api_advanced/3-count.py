@@ -12,8 +12,6 @@ def count_words(subreddit, word_list, after="", count=[]):
     """Function to count_words
     """
 
-    if count is None:
-        count = []
     if after == "":
         count = [0] * len(word_list)
 
