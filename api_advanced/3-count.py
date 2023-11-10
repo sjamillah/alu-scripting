@@ -12,7 +12,7 @@ def count_words(subreddit, word_list, after="", count=[]):
     """Function to count_words
     """
 
-    if after == "":
+    if count is None:
         count = [0] * len(word_list)
 
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
