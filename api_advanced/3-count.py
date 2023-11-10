@@ -13,13 +13,15 @@ def count_words(subreddit, word_list, after="", count=[]):
     """
 
     if count is None:
+        count = []
+    if after == "":
         count = [0] * len(word_list)
 
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     request = requests.get(url,
                            params={'after': after},
                            allow_redirects=False,
-                           headers={'user-agent': 'bhalut'})
+                           headers={'user-agent': 'Mozilla/5.0 \(Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0'})
 
     if request.status_code == 200:
         data = request.json()
